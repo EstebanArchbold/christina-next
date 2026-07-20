@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Site Template — design tokens (--tpl-*)
+   Paleta editorial adaptada de Ame; cámbiala por la del cliente.
+   ============================================================ */
+
+:root {
+  --tpl-bg: #faf6ef; /* crema cálido — fondo de página */
+  --tpl-bg-2: #e7e1d5; /* greige — secciones alternas */
+  --tpl-dark: #1b2a4e; /* índigo profundo — hero, footer, admin */
+  --tpl-accent: #b0553a; /* terracota — CTA y acentos */
+  --tpl-accent-hover: #98462f;
+  --tpl-carbon: #1a1a1a; /* titulares */
+  --tpl-gris: #7a7a6c; /* texto secundario */
+  --tpl-body-ink: #4f4c44; /* texto de párrafo */
+  --tpl-cream-ink: #f5f1e8; /* titulares sobre oscuro */
+
+  --tpl-serif: var(--font-fraunces), "Fraunces", Georgia, serif;
+  --tpl-sans: var(--font-inter), "Inter", system-ui, sans-serif;
+
+  --hairline: rgba(26, 26, 26, 0.14);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--tpl-bg);
+  color: var(--tpl-carbon);
+  font-family: var(--tpl-sans);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Esquinas rectas en todo, como en Ame */
+button,
+input,
+select,
+textarea {
+  border-radius: 0;
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--tpl-accent);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--tpl-accent);
+  outline-offset: 3px;
+}
+
+/* ── Botón principal ── */
+.btn-accent {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 9px;
+  background: var(--tpl-accent);
+  color: #fff;
+  border: none;
+  padding: 16px 30px;
+  font-family: var(--tpl-sans);
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.25s;
+  text-decoration: none;
+}
+
+.btn-accent:hover:not(:disabled) {
+  background: var(--tpl-accent-hover);
+}
+
+.btn-accent:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+/* ── Campos de formulario ── */
+.field-label {
+  display: block;
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tpl-gris);
+  margin-bottom: 8px;
+}
+
+.field-input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(26, 26, 26, 0.18);
+  padding: 13px 14px;
+  font-size: 14.5px;
+  color: var(--tpl-carbon);
+  transition: border-color 0.25s;
+  box-sizing: border-box;
+}
+
+.field-input:focus {
+  outline: none;
+  border-color: var(--tpl-accent);
+}
+
+.field-input[aria-invalid="true"] {
+  border-color: #a03024;
+}
+
+.field-error {
+  font-size: 12px;
+  color: #a03024;
+  margin-top: 6px;
+}
+
+.field-count {
+  font-size: 11px;
+  color: var(--tpl-gris);
+  text-align: right;
+  margin-top: 4px;
+}
+
+.field-count.is-over {
+  color: #a03024;
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
