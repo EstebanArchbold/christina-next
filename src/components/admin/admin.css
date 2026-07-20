@@ -64,9 +64,9 @@
 }
 
 .adm-nav-link.is-active {
-  color: #fff;
+  color: var(--tpl-accent);
   border-left-color: var(--tpl-accent);
-  background: rgba(250, 246, 239, 0.08);
+  background: rgba(212, 169, 104, 0.08);
 }
 
 .adm-side-footer {
@@ -98,7 +98,7 @@
 .adm-signout:hover {
   background: var(--tpl-accent);
   border-color: var(--tpl-accent);
-  color: #fff;
+  color: var(--tpl-bg);
 }
 
 @media (max-width: 860px) {
@@ -175,8 +175,8 @@
 }
 
 .adm-stat {
-  background: #fff;
-  border: 1px solid rgba(26, 26, 26, 0.12);
+  background: var(--tpl-card);
+  border: 1px solid var(--hairline);
   padding: 20px 22px;
 }
 
@@ -208,8 +208,8 @@
 
 /* ── Panels & tables ── */
 .adm-panel {
-  background: #fff;
-  border: 1px solid rgba(26, 26, 26, 0.12);
+  background: var(--tpl-card);
+  border: 1px solid var(--hairline);
   margin-bottom: 28px;
 }
 
@@ -220,7 +220,7 @@
   gap: 12px;
   flex-wrap: wrap;
   padding: 16px 20px;
-  border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+  border-bottom: 1px solid rgba(245, 241, 234, 0.1);
 }
 
 .adm-panel-title {
@@ -247,18 +247,18 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--tpl-gris);
-  border-bottom: 1px solid rgba(26, 26, 26, 0.12);
+  border-bottom: 1px solid rgba(245, 241, 234, 0.12);
   white-space: nowrap;
 }
 
 .adm-table td {
   padding: 13px 20px;
-  border-bottom: 1px solid rgba(26, 26, 26, 0.07);
+  border-bottom: 1px solid rgba(245, 241, 234, 0.07);
   vertical-align: middle;
 }
 
 .adm-table tr:hover td {
-  background: rgba(231, 225, 213, 0.35);
+  background: rgba(245, 241, 234, 0.04);
 }
 
 .adm-empty {
@@ -280,12 +280,12 @@
   white-space: nowrap;
 }
 
-.chip--confirmed { color: #2d5a34; border-color: #7fae87; background: #eef5ef; }
-.chip--pending { color: #8a6414; border-color: #d3b566; background: #faf3e2; }
-.chip--seated { color: #1b2a4e; border-color: #8fa0c5; background: #edf1f9; }
-.chip--completed { color: #4f4c44; border-color: #b9b4a5; background: #f2efe8; }
-.chip--cancelled { color: #7c261c; border-color: #cf8d83; background: #fbeeec; }
-.chip--no_show { color: #6b4a7c; border-color: #b394c4; background: #f5eef9; }
+.chip--confirmed { color: #9fd3a8; border-color: rgba(127, 174, 135, 0.45); background: rgba(45, 90, 52, 0.18); }
+.chip--pending { color: #e6c675; border-color: rgba(211, 181, 102, 0.45); background: rgba(138, 100, 20, 0.16); }
+.chip--seated { color: #a9bce3; border-color: rgba(143, 160, 197, 0.45); background: rgba(60, 80, 130, 0.2); }
+.chip--completed { color: rgba(245, 241, 234, 0.65); border-color: rgba(185, 180, 165, 0.4); background: rgba(185, 180, 165, 0.12); }
+.chip--cancelled { color: #d98a7c; border-color: rgba(207, 141, 131, 0.45); background: rgba(124, 38, 28, 0.18); }
+.chip--no_show { color: #c7a8d8; border-color: rgba(179, 148, 196, 0.45); background: rgba(107, 74, 124, 0.2); }
 
 /* ── Buttons ── */
 .adm-btn {
@@ -293,7 +293,7 @@
   align-items: center;
   gap: 8px;
   background: var(--tpl-accent);
-  color: #fff;
+  color: var(--tpl-bg);
   border: none;
   padding: 11px 20px;
   font-size: 11px;
@@ -316,18 +316,18 @@
 .adm-btn--ghost {
   background: transparent;
   color: var(--tpl-carbon);
-  border: 1px solid rgba(26, 26, 26, 0.25);
+  border: 1px solid rgba(245, 241, 234, 0.25);
 }
 
 .adm-btn--ghost:hover:not(:disabled) {
   background: var(--tpl-carbon);
-  color: #fff;
+  color: var(--tpl-bg);
 }
 
 .adm-btn--danger {
   background: transparent;
-  color: #a03024;
-  border: 1px solid #cf8d83;
+  color: #d98a7c;
+  border: 1px solid rgba(207, 141, 131, 0.5);
 }
 
 .adm-btn--danger:hover:not(:disabled) {
@@ -370,7 +370,7 @@
 /* ── View toggle ── */
 .adm-viewtoggle {
   display: inline-flex;
-  border: 1px solid rgba(26, 26, 26, 0.2);
+  border: 1px solid rgba(245, 241, 234, 0.2);
 }
 
 .adm-viewtoggle button {
@@ -387,7 +387,7 @@
 
 .adm-viewtoggle button.is-active {
   background: var(--tpl-carbon);
-  color: #fff;
+  color: var(--tpl-bg);
 }
 
 /* ── Week calendar ── */
@@ -401,8 +401,8 @@
 }
 
 .adm-cal-cell {
-  border-right: 1px solid rgba(26, 26, 26, 0.07);
-  border-bottom: 1px solid rgba(26, 26, 26, 0.07);
+  border-right: 1px solid rgba(245, 241, 234, 0.07);
+  border-bottom: 1px solid rgba(245, 241, 234, 0.07);
   min-height: 52px;
   padding: 4px;
   display: flex;
@@ -415,20 +415,20 @@
   font-size: 10.5px;
   letter-spacing: 0.08em;
   color: var(--tpl-gris);
-  border-right: 1px solid rgba(26, 26, 26, 0.12);
-  border-bottom: 1px solid rgba(26, 26, 26, 0.07);
+  border-right: 1px solid rgba(245, 241, 234, 0.12);
+  border-bottom: 1px solid rgba(245, 241, 234, 0.07);
   white-space: nowrap;
 }
 
 .adm-cal-dayhead {
   padding: 10px;
   text-align: center;
-  border-bottom: 1px solid rgba(26, 26, 26, 0.12);
-  border-right: 1px solid rgba(26, 26, 26, 0.07);
+  border-bottom: 1px solid rgba(245, 241, 234, 0.12);
+  border-right: 1px solid rgba(245, 241, 234, 0.07);
 }
 
 .adm-cal-dayhead.is-today {
-  background: rgba(176, 85, 58, 0.07);
+  background: rgba(212, 169, 104, 0.1);
 }
 
 .adm-cal-dayname {
@@ -452,9 +452,9 @@
   line-height: 1.35;
   padding: 5px 7px;
   cursor: pointer;
-  background: var(--tpl-dark);
-  color: #fff;
-  transition: background 0.2s;
+  background: rgba(212, 169, 104, 0.16);
+  color: var(--tpl-carbon);
+  transition: background 0.2s, color 0.2s;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -462,10 +462,12 @@
 
 .adm-cal-chip:hover {
   background: var(--tpl-accent);
+  color: var(--tpl-bg);
 }
 
 .adm-cal-chip--cancelled {
-  background: #b9b4a5;
+  background: rgba(185, 180, 165, 0.25);
+  color: var(--tpl-gris);
   text-decoration: line-through;
 }
 
@@ -477,7 +479,7 @@
 .adm-modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(26, 26, 26, 0.5);
+  background: rgba(4, 6, 12, 0.65);
   backdrop-filter: blur(3px);
   z-index: 100;
   display: flex;
@@ -487,8 +489,8 @@
 }
 
 .adm-modal {
-  background: var(--tpl-bg);
-  border: 1px solid rgba(26, 26, 26, 0.2);
+  background: var(--tpl-card);
+  border: 1px solid var(--hairline);
   width: 100%;
   max-width: 560px;
   max-height: 92vh;
@@ -542,7 +544,8 @@
 .adm-login-card {
   width: 100%;
   max-width: 400px;
-  background: var(--tpl-bg);
+  background: var(--tpl-card);
+  border: 1px solid var(--hairline);
   padding: 44px 40px;
 }
 
@@ -573,9 +576,9 @@
 }
 
 .adm-error {
-  border: 1px solid #a03024;
-  background: #fbeeec;
-  color: #7c261c;
+  border: 1px solid rgba(207, 141, 131, 0.5);
+  background: rgba(124, 38, 28, 0.18);
+  color: #d98a7c;
   padding: 13px 16px;
   font-size: 13px;
   line-height: 1.6;
@@ -597,8 +600,8 @@
 }
 
 .adm-media-card {
-  background: #fff;
-  border: 1px solid rgba(26, 26, 26, 0.12);
+  background: var(--tpl-card);
+  border: 1px solid var(--hairline);
   padding: 12px;
   display: flex;
   flex-direction: column;
@@ -608,7 +611,7 @@
 .adm-media-preview {
   position: relative;
   aspect-ratio: 4 / 3;
-  background: var(--tpl-bg-2, #e7e1d5);
+  background: var(--tpl-bg-2, #10182b);
   overflow: hidden;
   display: flex;
   align-items: center;

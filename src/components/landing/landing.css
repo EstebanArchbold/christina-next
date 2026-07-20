@@ -92,7 +92,7 @@
 
 .hero-bar-cta:hover {
   background: var(--tpl-accent);
-  color: #fff;
+  color: var(--tpl-bg);
 }
 
 .hero-bar-wordmark {
@@ -467,6 +467,70 @@
 }
 
 /* Blog */
+.blog-eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--tpl-accent);
+  margin: 0 0 14px;
+}
+
+.blog-featured {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  border: 1px solid var(--hairline);
+  background: var(--tpl-card);
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 40px;
+  transition: border-color 0.25s, transform 0.25s;
+}
+
+.blog-featured:hover {
+  border-color: rgba(212, 169, 104, 0.4);
+  transform: translateY(-2px);
+}
+
+.blog-featured-cover {
+  aspect-ratio: 16 / 11;
+  background: var(--tpl-bg-2);
+  overflow: hidden;
+}
+
+.blog-featured-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-featured-body {
+  padding: clamp(24px, 4vw, 44px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-featured-body .blog-card-title {
+  font-size: clamp(24px, 3vw, 34px);
+  font-style: italic;
+}
+
+.blog-featured-more {
+  margin-top: 18px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tpl-accent);
+}
+
+@media (max-width: 760px) {
+  .blog-featured {
+    grid-template-columns: 1fr;
+  }
+}
+
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -474,18 +538,19 @@
 }
 
 .blog-card {
-  background: #fff;
+  background: var(--tpl-card);
   border: 1px solid var(--hairline);
   text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
-  transition: transform 0.25s, box-shadow 0.25s;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
 }
 
 .blog-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(26, 26, 26, 0.08);
+  border-color: rgba(212, 169, 104, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 .blog-card-cover {
@@ -509,7 +574,7 @@
   font-size: 10px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--tpl-gris);
+  color: var(--tpl-accent);
 }
 
 .blog-card-title {
@@ -663,7 +728,7 @@
   height: 96px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(245, 241, 232, 0.4);
+  border: 2px solid rgba(212, 169, 104, 0.55);
 }
 
 .linktree-avatar--placeholder {
@@ -716,7 +781,7 @@
 .linktree-link:hover {
   background: var(--tpl-accent);
   border-color: var(--tpl-accent);
-  color: #fff;
+  color: var(--tpl-bg);
 }
 
 .linktree-home {
@@ -753,7 +818,8 @@
   padding: 12px 0;
   text-align: center;
   border: 1px solid var(--hairline);
-  background: #fff;
+  background: var(--tpl-card);
+  color: var(--tpl-carbon);
   cursor: pointer;
   transition: border-color 0.2s, background 0.2s;
 }
@@ -766,7 +832,7 @@
 .booking-day.is-selected {
   border-color: var(--tpl-accent);
   background: var(--tpl-accent);
-  color: #fff;
+  color: var(--tpl-bg);
 }
 
 .booking-day-name {
@@ -796,7 +862,8 @@
   text-align: center;
   font-size: 13px;
   border: 1px solid var(--hairline);
-  background: #fff;
+  background: var(--tpl-card);
+  color: var(--tpl-carbon);
   cursor: pointer;
   transition: border-color 0.2s, background 0.2s;
 }
@@ -810,13 +877,13 @@
 .booking-slot.is-selected {
   border-color: var(--tpl-accent);
   background: var(--tpl-accent);
-  color: #fff;
+  color: var(--tpl-bg);
 }
 
 .booking-success {
-  border: 1px solid #7fae87;
-  background: #eef5ef;
-  color: #2d5a34;
+  border: 1px solid rgba(127, 174, 135, 0.45);
+  background: rgba(45, 90, 52, 0.18);
+  color: #9fd3a8;
   padding: 26px 28px;
   line-height: 1.7;
 }

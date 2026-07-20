@@ -2,24 +2,26 @@
 
 /* ============================================================
    Site Template — design tokens (--tpl-*)
-   Paleta editorial adaptada de Ame; cámbiala por la del cliente.
+   Paleta "Nocturnal" — alineada con christina.css (.et):
+   fondo azul profundo, acento dorado, tinta crema.
    ============================================================ */
 
 :root {
-  --tpl-bg: #faf6ef; /* crema cálido — fondo de página */
-  --tpl-bg-2: #e7e1d5; /* greige — secciones alternas */
-  --tpl-dark: #1b2a4e; /* índigo profundo — hero, footer, admin */
-  --tpl-accent: #b0553a; /* terracota — CTA y acentos */
-  --tpl-accent-hover: #98462f;
-  --tpl-carbon: #1a1a1a; /* titulares */
-  --tpl-gris: #7a7a6c; /* texto secundario */
-  --tpl-body-ink: #4f4c44; /* texto de párrafo */
-  --tpl-cream-ink: #f5f1e8; /* titulares sobre oscuro */
+  --tpl-bg: #0a0e18; /* azul profundo — fondo de página */
+  --tpl-bg-2: #10182b; /* superficie — secciones alternas */
+  --tpl-dark: #0f1524; /* sidebar admin, footer, linktree */
+  --tpl-card: #141b2d; /* paneles y tarjetas */
+  --tpl-accent: #d4a968; /* dorado — CTA y acentos */
+  --tpl-accent-hover: #e6bc7a;
+  --tpl-carbon: #f5f1ea; /* titulares */
+  --tpl-gris: rgba(245, 241, 234, 0.55); /* texto secundario */
+  --tpl-body-ink: rgba(245, 241, 234, 0.72); /* texto de párrafo */
+  --tpl-cream-ink: #f5f1ea; /* titulares sobre oscuro */
 
   --tpl-serif: var(--font-fraunces), "Fraunces", Georgia, serif;
   --tpl-sans: var(--font-inter), "Inter", system-ui, sans-serif;
 
-  --hairline: rgba(26, 26, 26, 0.14);
+  --hairline: rgba(212, 169, 104, 0.16);
 }
 
 html {
@@ -47,7 +49,7 @@ textarea {
 
 ::selection {
   background: var(--tpl-accent);
-  color: #fff;
+  color: var(--tpl-bg);
 }
 
 :focus-visible {
@@ -61,7 +63,7 @@ textarea {
   align-items: baseline;
   gap: 9px;
   background: var(--tpl-accent);
-  color: #fff;
+  color: var(--tpl-bg);
   border: none;
   padding: 16px 30px;
   font-family: var(--tpl-sans);
@@ -94,13 +96,17 @@ textarea {
 
 .field-input {
   width: 100%;
-  background: #fff;
-  border: 1px solid rgba(26, 26, 26, 0.18);
+  background: rgba(245, 241, 234, 0.05);
+  border: 1px solid rgba(245, 241, 234, 0.2);
   padding: 13px 14px;
   font-size: 14.5px;
   color: var(--tpl-carbon);
   transition: border-color 0.25s;
   box-sizing: border-box;
+}
+
+.field-input::placeholder {
+  color: rgba(245, 241, 234, 0.4);
 }
 
 .field-input:focus {
@@ -109,12 +115,12 @@ textarea {
 }
 
 .field-input[aria-invalid="true"] {
-  border-color: #a03024;
+  border-color: #d98a7c;
 }
 
 .field-error {
   font-size: 12px;
-  color: #a03024;
+  color: #d98a7c;
   margin-top: 6px;
 }
 
@@ -126,7 +132,7 @@ textarea {
 }
 
 .field-count.is-over {
-  color: #a03024;
+  color: #d98a7c;
   font-weight: 600;
 }
 
