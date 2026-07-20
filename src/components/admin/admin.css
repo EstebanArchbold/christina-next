@@ -152,6 +152,37 @@
   padding: clamp(24px, 4vw, 48px);
 }
 
+.adm-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.adm-head .adm-title {
+  margin: 0;
+}
+
+.adm-viewpage {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--tpl-accent);
+  text-decoration: none;
+  border: 1px solid var(--hairline);
+  padding: 8px 14px;
+  white-space: nowrap;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+
+.adm-viewpage:hover {
+  background: var(--tpl-accent);
+  border-color: var(--tpl-accent);
+  color: var(--tpl-bg);
+}
+
 .adm-title {
   font-family: var(--tpl-serif);
   font-weight: 500;

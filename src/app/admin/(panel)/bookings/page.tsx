@@ -1,13 +1,15 @@
-﻿import { BookingsManager } from "@/components/admin/BookingsManager";
+﻿import { AdmHead } from "@/components/admin/AdmHead";
+import { BookingsManager } from "@/components/admin/BookingsManager";
 
 export default function AdminBookingsPage() {
   return (
     <>
-      <h1 className="adm-title">Bookings &amp; calendar</h1>
-      <p className="adm-subtitle">
-        Set your availability, see who booked, and confirm or cancel. Each booking syncs with
-        Google Calendar when configured.
-      </p>
+      <AdmHead
+        title="Bookings & calendar"
+        viewHref="/book"
+        viewLabel="View booking page"
+        subtitle="Set your availability, see who booked, and confirm or cancel. Each booking syncs with Google Calendar when configured."
+      />
       <BookingsManager />
     </>
   );

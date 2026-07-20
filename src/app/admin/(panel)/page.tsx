@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AdmHead } from "@/components/admin/AdmHead";
 import { createServiceClient } from "@/lib/supabase/admin";
 
 export const dynamic = "force-dynamic";
@@ -50,8 +51,12 @@ export default async function AdminDashboard() {
 
   return (
     <>
-      <h1 className="adm-title">Dashboard</h1>
-      <p className="adm-subtitle">Site overview. Everything public is edited from this panel.</p>
+      <AdmHead
+        title="Dashboard"
+        viewHref="/"
+        viewLabel="View site"
+        subtitle="Site overview. Everything public is edited from this panel."
+      />
 
       {!counts.ok && (
         <div className="adm-error">

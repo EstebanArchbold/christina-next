@@ -1,12 +1,14 @@
-﻿import { BlogManager } from "@/components/admin/BlogManager";
+﻿import { AdmHead } from "@/components/admin/AdmHead";
+import { BlogManager } from "@/components/admin/BlogManager";
 
 export default function AdminBlogPage() {
   return (
     <>
-      <h1 className="adm-title">Blog</h1>
-      <p className="adm-subtitle">
-        Create, edit and publish posts. Drafts are not visible on the public site.
-      </p>
+      <AdmHead
+        title="Blog"
+        viewHref="/blog"
+        subtitle="Create, edit and publish posts. Drafts are not visible on the public site."
+      />
       <BlogManager />
     </>
   );
